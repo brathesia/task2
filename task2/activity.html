@@ -1,0 +1,126 @@
+<html>
+	
+	<head>
+	<link type="text/css" rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+	<body style="background-color:#cdcdd0;"onload="list()" >
+		    
+<div class="col-md-12 topnav">
+  <div class="col-md-1">
+  </div>
+       <div class="col-md-1">
+       	<img src="images/header.jpg" style=" width: 37px;float: right;">    
+
+       </div>
+       <div class="col-md-2 search">
+       	 <input type="text" placeholder="Search.." name="search" style="width: 193px; padding: 6px;">
+      <i class="fa fa-search" style="background-color: #bfbfbf; padding:10px;margin-left: -5px;"></i>
+       </div>
+       <div class="col-md-1 banner">
+           <a href="profile.html"> <img src="images/profile.jfif" alt="Banner image" ></a>
+       </div>
+       <div class="col-md-1">
+       <a href="profile.html" class="logout uname" ><p id="actUName"></p></a>
+       </div>
+       <div class="col-md-1">
+       <a href="profile.html"class="logout"> <p style="text-align:center">Home</p></a>
+       </div>
+       <div class="col-md-1">
+        <p>Find Friends</p>
+       </div>
+       <div class="col-md-1">
+        <p style="text-align: center;">Create</p>
+       </div>
+        <div class="col-md-1">
+       <a href="activity.html"class="logout"> <p>Activity Log</p></a>
+       </div>
+       <div class="col-md-1">
+       <a href="loginpage.html" class="logout"> <p>Logout</p></a>
+       </div>
+        <div class="col-md-1">
+     
+       </div>
+ </div>
+
+ <div class="container">
+      <div class="col-md-2">
+  
+      </div>
+      <div class="col-md-8">
+              <div class="col-md-12 first_div" >
+              <div class="col-md-8">
+                <img src="images/logo.png" style="width:35px;"> &nbsp;
+                
+                <b style="color:#3b5998">Active Log</b>
+              </div>
+                
+                <div class="form-group col-md-4" style="margin-bottom: 0px;">
+                  <div class="input-group">
+                      <input type="text" class="form-control search"
+                             placeholder="Search" id="inputGroup"/>
+                      <span class="input-group-addon search_icon">
+                          <i class="fa fa-search"></i>
+                      </span>
+                  </div>
+              </div>
+              </div>
+<div id="logcontents"></div>
+                    
+                </div>
+      </div>
+
+      
+    </div>
+<!--------------------------------------->
+<script>
+$(document).ready(function(){
+    $(".div2,.div3").hide();
+    $(".p1").click(function(){
+        $(".div1").show();
+        $(".div2").hide();
+        $(".div3").hide();
+    })
+    $(".p2").click(function(){
+        $(".div2").show();
+        $(".div1").hide();
+        $(".div3").hide();
+    })
+    $(".p3").click(function(){
+        $(".div3").show();
+        $(".div1").hide();
+        $(".div2").hide();
+    })
+})
+function list()
+{
+  var activityslist =JSON.parse(localStorage.getItem('ActivityLog'));
+  for(var i=0; i<activityslist.length;i++){
+    var result=activityslist[i];
+    $('#logcontents').append('<div class="col-md-12 activeblog_div"><b>'+result.cdate+'</b></div><div class="col-md-12 activeblog_div" >'+
+     '<div class="col-md-4"><div class="media-left"><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/dOJFaVZihS_.png" class="media-object">'+
+      '</div><div class="media-body"><p>'+result.Title+'</p></div></div><div  class="col-md-3"><img src="images/profile.jfif" style="width:150px;height:150px;"> '+
+      '</div> <div class="col-md-5"><div class="media-body"><p>'+result.Datetimes+'<a href=""><i class="fa fa-pencil" aria-hidden="true" style="float:right;"></i></a></p>'+
+      '</div></div></div>');
+
+
+    
+  }
+
+  var res = JSON.parse(localStorage.getItem('usersDetails'));   
+       var uid = sessionStorage.getItem("userindex");
+
+        
+        var result=res[uid];
+
+      var username=result.username;
+
+      $("#actUName").html(username);
+
+}
+</script>
+</body>
+</html>

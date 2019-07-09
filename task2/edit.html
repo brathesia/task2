@@ -1,0 +1,402 @@
+<html>
+	
+	<head>
+		<link type="text/css" rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <script src="Js/script.js"></script>
+</head>
+	<body style="background-color:#cdcdd0;">
+		    
+<div class="col-md-12 topnav">
+       <div class="col-md-1">
+       	<img src="images/header.jpg" style=" width: 37px;float: right;">    
+
+       </div>
+       <div class="col-md-3 search">
+       	 <input type="text" placeholder="Search.." name="search">
+      <i class="fa fa-search"></i>
+       </div>
+        <div class="col-md-1 banner">
+           <a href="profile.html"> <img src="images/profile.jfif" alt="Banner image" ></a>
+       </div>
+       <div class="col-md-1">
+       <a href="profile.html"class="logout uname" ><p>Brathesia</p></a>
+       </div>
+       <div class="col-md-1">
+       <a href="profile.html"class="logout"> <p style="text-align:center">Home</p></a>
+       </div>
+       <div class="col-md-1">
+        <p>Find Friends</p>
+       </div>
+       <div class="col-md-1">
+        <p style="text-align: center;">Create</p>
+       </div>
+       <div class="col-md-1">
+       <a href="activity.html"class="logout"> <p>Activity Log</p></a>
+       </div>
+       <div class="col-md-1">
+       <a href="loginpage.html" class="logout"> <p>Logout</p></a>
+       </div>
+        <div class="col-md-1">
+       </div>
+ </div>
+
+ <!-------------------PROFILE------------------------>
+        <div id="edit-upper col-md-12">
+        	<div class="col-md-9" style="padding:0px">
+            <div id="edit-banner-image">
+                <img src="images/background2.jpg" alt="Banner image">
+                 <div class="positionbutton">
+                <a href="#" class="btn btn-default btn-app btn-md" role="button"><i class="fa fa-pencil"></i><span>Edit Profile</span></a>
+                <a href="#" class="btn btn-default btn-app btn-md" role="button"><i class="fa fa-list"></i><span >Activity Log</span></a>
+        </div> 
+            </div>
+
+            <div id="edit-d">
+                <div id="edit-pic">
+                    <img src="images/profile.jfif">    
+                </div>
+                <div id="edit-name">Brathesia Brathe</div>
+            </div>
+        </div>
+        <div class="col-md-3 chat">
+        
+
+        </div>
+
+        </div>
+
+<!-----------------------Timeline------------------------>
+<div class="col-md-12">
+        	<div class="col-md-9 sections-edit">
+        	<div class="col-md-2">
+        	</div>
+        <div class="col-md-2 border">
+        	<span><p>Timeline<i class="fas fa-caret-down" style="padding-left: 21px;"></i></p></span>
+        </div>
+        <div class="col-md-1 border">
+        	<p>About</p>
+        </div>
+        <div class="col-md-1 border">
+        	<p>Friends</p>
+        </div>
+        <div class="col-md-1 border">
+        	<p>Photos</p>
+        </div>
+        <div class="col-md-2 border">
+       <span><p>Archive<i class="fa fa-lock" aria-hidden="true"  style="padding-left: 21px;"></i></p></span>
+        </div>
+        <div class="col-md-3">
+        <span><p>More<i class="fas fa-caret-down" style="padding-left: 21px;"></i></p></span>
+        </div>
+        </div>
+         <div class="col-md-3 ">
+         </div>
+    </div>
+   
+
+   
+
+<div class="col-md-12">
+    
+    <div class="col-md-10" style="margin-left: 77px; width: 1187px;margin-top:24px">
+
+  <div class="panel panel-default">
+    <div class="panel-heading" style="padding: 15px;"><i class="fa fa-user" style="font-size:24px"></i><span style="position: relative;margin-left: 10px; font-size: 18px; "><b>About</b></span></div>
+    <div class="panel-body">
+  <div class="col-md-4">
+   <ul class="nav nav-pills nav-stacked">
+    <li><a  class="active" onclick="personal();">Personal Details</a></li>
+    <li><a  class="" onclick="education();">Education</a></li>
+    <li><a  class="" onclick="work();">Work Organisation</a></li>
+    </ul>
+</div>
+
+ <div class="col-md-8">
+
+         <div class="panel panel-default" id="personaldetails" style="">
+
+            <div class="panel-body">
+                
+                <form action="" >
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">User Name</label>
+                        <input type="text" id="username" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div>
+
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">Birth City</label>
+                         <input type="text" id="birthcity" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div>
+
+                  
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">Current City</label>
+                        <input type="text" id="currentcity" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div>
+
+                  
+
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">State </label>
+                         <input type="text" id="state" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div>
+
+                 
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">Country</label>
+                         <input type="text" id="country" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div>
+
+              
+
+                  <div class="form-group pull-right">
+
+                   <a href="profile.html" class="btn btn-warning" role="button">Cancel</a>
+                   <button type="button" class="btn btn-primary" onclick="personaldetails()">Save Changes</button>
+                 </div> 
+           </form>
+                  
+             </div>
+            </div>
+
+            <div class="panel panel-default" id="educationdetails" style="">
+
+            <div class="panel-body">
+                
+                <form action="" >
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">College</label>
+                         <input type="text" id="college" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div>
+
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">School</label>
+                         <input type="text" id="school" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div> 
+                  <div class="form-group pull-right">
+
+                   <a href="profile.html" class="btn btn-warning" role="button">Cancel</a>
+                   <button type="button" class="btn btn-primary" onclick="educationdetails1()">Save Changes</button>
+                 </div> 
+           </form>
+                  
+             </div>
+            </div>
+
+      <div class="panel panel-default" id="workdetails" style="">
+
+            <div class="panel-body">
+                
+                <form action="" >
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">Current job Role</label>
+                          <input type="text" id="jobrole" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div>
+
+                  <div class="col-md-12">
+                         <label class="edit" for="fname">Current Organisation</label>
+                          <input type="text" id="organisation" name="firstname"  style="border-radius: 0px;"class="form-control form-group" placeholder="Your name..">
+
+                  </div>   
+                  <div class="form-group pull-right">
+
+                   <a href="profile.html" class="btn btn-warning" role="button">Cancel</a>
+                   <button type="button" class="btn btn-primary" onclick="workdetails();">Save Changes</button>
+                 </div> 
+           </form>
+                  
+             </div>
+            </div>
+
+      </div>
+  </div>
+
+
+
+</div> 
+</div>
+<div class="col-md-2">
+    </div>
+</div>
+<script type="text/javascript">
+      
+            document.getElementById("personaldetails").style.display = "block";
+            document.getElementById("educationdetails").style.display = "none";
+            document.getElementById("workdetails").style.display = "none";
+
+
+//fetching the values in local storage and setting in input type//
+
+      var getsession = JSON.parse(sessionStorage.getItem("usersDetails")) ;
+      // if(getsession ==null){
+      //   sessionStorage.removeItem("usersDetails");
+      //   sessionStorage.clear();
+      //   document.location.href = "Loginpage.html";
+        
+      // }
+  
+        var res = JSON.parse(localStorage.getItem('usersDetails'));   
+        var uid = sessionStorage.getItem("userindex");
+
+        
+        var result=res[uid];
+
+      var username=result.username;
+      var birthcity= result.birthCity;
+      var currentcity= result.currentCity;
+      var state= result.state;
+      var country= result.country;
+      var Jobrole= result.currentJobRole;
+      var Organization= result.currentOrganization;
+      var school = result.school;
+      var college= result.college;
+
+
+    
+       document.getElementById("username").value = username;
+       document.getElementById("birthcity").value = birthcity;
+       document.getElementById("currentcity").value = currentcity;
+       document.getElementById("state").value = state;
+       document.getElementById("country").value =country;
+       document.getElementById("school").value =school;
+       document.getElementById("college").value =college;
+       document.getElementById("jobrole").value =Jobrole;
+       document.getElementById("organisation").value =Organization;
+       
+
+
+
+  var res = JSON.parse(localStorage.getItem('usersDetails'));
+  var uid = sessionStorage.getItem("userindex");
+  
+    var result=res[uid];
+  
+    function personaldetails(){
+       
+
+        res[uid] = {
+                username    : document.getElementById("username").value,
+                password  : result.password,
+                birthCity    : document.getElementById("birthcity").value,
+                currentCity  : document.getElementById("currentcity").value,
+                state    : document.getElementById("state").value,
+                country  : document.getElementById("country").value,
+                currentJobRole    : result.currentJobRole,
+                currentOrganization  : result.currentOrganization,
+                school    : result.school,
+                college  : result.college,
+        email : result.email,
+    };//Alter the selected item on the table
+    
+     localStorage.setItem("usersDetails", JSON.stringify(res));
+       alert('Profile Updated Successfully!!!');
+     window.location.href="Profile.html";
+
+    }
+    
+     $(document).ready(function () {
+
+            var res = JSON.parse(localStorage.getItem('usersDetails'));
+            var uid = sessionStorage.getItem("userindex");
+
+            var result = res[uid];
+
+            var username = result.username;
+            var birthcity = result.birthCity;
+
+            $('#edit-name').text(username);
+            $('#headerName').text(username);
+        });
+  
+   function educationdetails1(){
+        res[uid] = {
+                username    : result.username,
+                password    :  result.password,
+                birthCity    : result.birthCity,
+                currentCity  : result.currentCity,
+                state        : result.state,
+                country  : result.country,
+                currentJobRole    : result.currentJobRole,
+                currentOrganization  : result.currentOrganization,
+                school    : document.getElementById("school").value,
+                college  : document.getElementById("college").value,
+        email : result.email,
+    };//Alter the selected item on the table
+  
+        localStorage.setItem("usersDetails", JSON.stringify(res));
+       alert('Profile Updated Successfully!!!');
+     window.location.href="Profile.html";
+
+    }
+    function workdetails(){
+        res[uid] = {
+                username    : result.username,
+                password    :  result.password,
+                birthCity    : result.birthCity,
+                currentCity  : result.currentCity,
+                state        : result.state,
+                country  : result.country,
+                currentJobRole    : document.getElementById("jobrole").value,
+                currentOrganization  : document.getElementById("organisation").value,
+                school    : result.school,
+                college  : result.college,
+        email : result.email,
+    };//Alter the selected item on the table
+  
+        localStorage.setItem("usersDetails", JSON.stringify(res));
+       alert('Profile Updated Successfully!!!');
+     window.location.href="Profile.html";
+
+
+    }
+    function activitylog(){
+        window.location.href="activitylog.html";
+
+    }
+
+    function logout(){
+        window.location.href="activitylog.html";
+
+
+    }
+   function personal ()
+      {
+            document.getElementById("personaldetails").style.display = "block";
+            document.getElementById("educationdetails").style.display = "none";
+            document.getElementById("workdetails").style.display = "none";
+
+      }
+   
+      function education()
+      {
+            document.getElementById("personaldetails").style.display = "none";
+            document.getElementById("educationdetails").style.display = "block";
+            document.getElementById("workdetails").style.display = "none";
+
+      }
+
+      function work () 
+      {
+            document.getElementById("workdetails").style.display = "block";
+            document.getElementById("personaldetails").style.display = "none";
+            document.getElementById("educationdetails").style.display = "none";
+            
+
+      }
+</script>
+ 
+</body>
+</html>
+

@@ -1,0 +1,94 @@
+
+<html>
+
+	<head>
+	<link type="text/css" rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="Js/script.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+	</head>
+	<body onload= "abc()">
+		<div class="fb-header-base">
+		</div>
+		<div class="fb-header">
+			<div id="img1" class="fb-header"><img src="images/facebook.png" /></div>
+			<div id="form1" class="fb-header">Email or Phone<br>
+			<input  type="mail" name="name" id="email" /><br>
+			</div>
+			
+			<div id="form2" class="fb-header">Password<br>
+			<input type="password" name="password" id="pass" /><br>
+			Forgotten account?
+			</div>
+			</div>
+		</div>
+		<button class="submit1" onClick ="login()">Log In</button>
+		<div class="fb-body">
+			<!-- <div id="intro1" class="fb-body">Facebook helps you connect and share with the <br>
+			people in your life.</div> -->
+			<div id="intro2" class="fb-body">Create an account</div>
+			<div id="intro3" class="fb-body">It's free and always will be.</div>
+			<div id="form3" class="fb-body">
+				<input placeholder="First Name" type="text" id="namebox" name="name1" />
+				<input placeholder="Last Name" type="text" id="namebox"  /> <br>
+				<input placeholder="Mobile number or email address" type="text" id="mailbox" /><br>
+				<input placeholder="New Password" type="password" id="mailbox"  /><br>
+				<p style="color: #90949c;margin-bottom: 0px">Birthday </p>
+				<input type="date" id="namebox"  />
+				<p style="color: #90949c;margin-bottom: 0px">Gender </p>
+				<input type="radio" id="r-b" name="sex" value="male" />Male
+				<input type="radio" id="r-b" name="sex" value="female" />Female
+				<input type="radio" id="r-b" name="sex" value="Custom" />Custom<br>
+				<p id="intro4">By clicking Create an account, you agree to our Terms and that 
+				you have read our Data Policy, including our Cookie Use.</p>
+				<input type="submit" class="button2" value="Create an account" />
+				<br><hr>
+				
+			</div>
+			
+		</div>
+		<script>
+		var userDetailsArr = [];
+		function login(){
+		var getAllUDetails =JSON.parse(localStorage.getItem("usersDetails"));
+		var emailId = document.getElementById("email").value;
+		var pwd =   document.getElementById("pass").value;
+		var today = new Date();
+		 var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();   
+		var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var datetime = date +' - '+time;
+        var getactivity=  JSON.parse(localStorage.getItem('ActivityLog'));
+        if(getactivity == null){
+          getactivity=[];
+        }
+        var datas={Title:'Login',Datetimes:datetime,cdate:date};
+        
+		for(var i=0;i<getAllUDetails.length;i++){
+			var res=getAllUDetails[i];
+
+
+        if(res.email == emailId && res.password == pwd){
+            var myObj = JSON.stringify(res);
+            userDetailsArr.push(myObj);
+            getactivity.push(datas);
+            localStorage.setItem('ActivityLog',JSON.stringify(getactivity));
+
+
+            sessionStorage.setItem("loggedInUserDetails", JSON.stringify(userDetailsArr));
+            sessionStorage.setItem("userindex",i);
+            window.location.href = "profile.html";
+            return true;
+            
+        }
+                //alert("invalid username and password");
+            
+        }
+alert("invalid username and password");
+return false;
+    }
+	</script>
+
+	</body>
+	
+</html>
